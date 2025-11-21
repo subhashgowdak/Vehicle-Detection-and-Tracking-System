@@ -55,6 +55,29 @@ cover/
 *.mo
 *.pot
 
+# Datasets, Models, and Outputs
+datasets/
+data/
+models/
+checkpoints/
+runs/
+weights/
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.ckpt
+*.zip
+*.tar
+*.tar.gz
+
+# Logs and Outputs
+logs/
+output/
+reports/
+wandb/
+mlruns/
+
 # Django stuff:
 *.log
 local_settings.py
@@ -144,6 +167,10 @@ ENV/
 env.bak/
 venv.bak/
 
+# Environment variables
+.env.*
+*.env
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -205,3 +232,23 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# IDEs and Editors
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+__tests__/
+coverage/
+*.coverage
+*.pytest_cache/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
