@@ -40,3 +40,7 @@ while cap.isOpened():
     #exit loop if q is pressed
     if cv2.waitKey(0) & 0xFF == ord('q'):
         break
+
+#release resources
+cap.release()
+cv2.destroyAllWindows()
