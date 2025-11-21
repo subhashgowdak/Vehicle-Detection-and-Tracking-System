@@ -36,3 +36,7 @@ while cap.isOpened():
 
     #show the frame
     cv2.imshow("YOLO object tracking and counting", frame)
+
+    #exit loop if q is pressed
+    if cv2.waitKey(0) & 0xFF == ord('q'):
+        break
