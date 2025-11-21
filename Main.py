@@ -4,6 +4,7 @@ from collections import defaultdict
 
 #Load the YOLO model
 model= YOLO('yolo11l.pt')
+class_list=model.names
 
 #Open the video file
 cap=cv2.VideoCapture('test_videos/cars_video_for_detection(720p).mp4')
@@ -24,3 +25,11 @@ while cap.isOpened():
         track_ids=results[0].boxes.id.int().cpu().tolist()
         class_indices=results[0].boxes.cls.int().cpu().tolist()
         confidences=results[0].boxes.conf.cpu()
+
+        #loop through each detected object
+        for box, track_id, class_idx, conf in zip(boxes, track_ids, class_indices, confidences):
+            x1,y1,x2,y2=map(int,box)
+            class_name=class_list[class_idx]
+            cv2.putText(frame,f"ID: {track_id} {class_name}",(x1,y1-10),
+                        cv2.FONT_HERSHEY_SIMPLEX,0.6,(0,255,255),2)
+            cv2.rectangle(frame,(x1,y1),(x2,y2),(0,255,0),2)
