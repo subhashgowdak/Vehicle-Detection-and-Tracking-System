@@ -90,3 +90,6 @@ model = YOLO('yolo11l.pt')
 ```bash
 python Main.py
 ```
+
+## 📜 License  
+This project is open-source and released under the included **LICENSE** file.
