@@ -1,4 +1,4 @@
-## Vehicle Detection and Tracking System
+# Vehicle Detection and Tracking System
 
 A Python-based **real-time vehicle detection, tracking, and counting system** built using YOLO, OpenCV, and video analytics.
 This project demonstrates how computer vision can be used for traffic monitoring, automated counting, and basic surveillance tasks.
@@ -28,3 +28,27 @@ Vehicle-Detection-and-Tracking-System/
 - **OpenCV** – video processing & visualization  
 - **Ultralytics YOLO** (yolo11l.pt) – vehicle detection  
 - **Default Python Collections** – tracking & counting
+
+## ⚙️ How It Works  
+### 1. **YOLO Model Loading**  
+The script loads the `yolo11l.pt` model and its class names from Ultralytics.
+
+### 2. **Video Processing**  
+The system loads a test video stored at:
+```
+test_videos/cars_video_for_detection(720p).mp4
+```
+
+### 3. **Vehicle Tracking & Line Crossing**  
+- A horizontal line (`line_y_red = 480`) is drawn across the frame  
+- Whenever a vehicle’s bounding box center crosses the line, its class count is incremented  
+- Counts are stored in a Python `defaultdict(int)`
+
+### 4. **Real-Time Display**  
+The video window shows:  
+- Bounding boxes  
+- Class labels  
+- A red detection line  
+- Total vehicle counts by category  
+
+Press **Q** to exit.
