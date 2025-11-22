@@ -11,6 +11,9 @@ cap=cv2.VideoCapture('test_videos/cars_video_for_detection(720p).mp4')
 
 line_y_red=480 #red line position
 
+#dictionary to store object count by class
+class_counts=defaultdict(int)
+
 while cap.isOpened():
     ret, frame=cap.read()
     if not ret:
