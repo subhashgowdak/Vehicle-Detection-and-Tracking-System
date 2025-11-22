@@ -93,3 +93,7 @@ python Main.py
 
 ## 📜 License  
 This project is open-source and released under the included **LICENSE** file.
+
+## ✨ Author  
+**Subhash Gowda K**  
+AI & ML Engineer passionate about computer vision, traffic analytics, and real-world AI applications.
