@@ -49,6 +49,12 @@ while cap.isOpened():
             cv2.rectangle(frame,(x1,y1),(x2,y2),(0,255,0),2)
             cv2.circle(frame,(cx,cy),4,(0,0,255),-1) #draw circle at the center of each detected object
 
+            #check if the object has crossed the red line
+            if cy > line_y_red and track_id not in crossed_ids:
+                #mark the object as crossed
+                crossed_ids.add(track_id)
+                class_counts[class_name]+=1
+
     #show the frame
     cv2.imshow("YOLO object tracking and counting", frame)
 
