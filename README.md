@@ -22,3 +22,9 @@ Vehicle-Detection-and-Tracking-System/
 ├── LICENSE                # Open-source license (MIT / Apache etc.)
 └── .gitignore
 ```
+
+## 🧠 Technologies Used  
+- **Python**  
+- **OpenCV** – video processing & visualization  
+- **Ultralytics YOLO** (yolo11l.pt) – vehicle detection  
+- **Default Python Collections** – tracking & counting
