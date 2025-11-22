@@ -14,6 +14,9 @@ line_y_red=480 #red line position
 #dictionary to store object count by class
 class_counts=defaultdict(int)
 
+#dictionary to keep track of object IDs that have crossed the line
+crossed_ids=set()
+
 while cap.isOpened():
     ret, frame=cap.read()
     if not ret:
