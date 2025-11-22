@@ -55,6 +55,13 @@ while cap.isOpened():
                 crossed_ids.add(track_id)
                 class_counts[class_name]+=1
 
+        #Display the counts on the frame
+        y_offset=30
+        for class_name, count in class_counts.items():
+            cv2.putText(frame,f"{class_name}: {count}",(20,y_offset),
+                        cv2.FONT_HERSHEY_SIMPLEX,0.8,(0,0,250),2)
+            y_offset+=30
+
     #show the frame
     cv2.imshow("YOLO object tracking and counting", frame)
 
