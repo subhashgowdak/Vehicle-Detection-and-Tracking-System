@@ -9,6 +9,8 @@ class_list=model.names
 #Open the video file
 cap=cv2.VideoCapture('test_videos/cars_video_for_detection(720p).mp4')
 
+line_y_red=480 #red line position
+
 while cap.isOpened():
     ret, frame=cap.read()
     if not ret:
@@ -25,6 +27,9 @@ while cap.isOpened():
         track_ids=results[0].boxes.id.int().cpu().tolist()
         class_indices=results[0].boxes.cls.int().cpu().tolist()
         confidences=results[0].boxes.conf.cpu()
+
+        #draw red line on each frame
+        cv2.line(frame,(5,line_y_red),(640,line_y_red),(0,0,255),3)
 
         #loop through each detected object
         for box, track_id, class_idx, conf in zip(boxes, track_ids, class_indices, confidences):
