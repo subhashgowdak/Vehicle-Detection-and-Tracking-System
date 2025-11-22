@@ -12,3 +12,13 @@ This system uses the **YOLO (Ultralytics)** object detection model to identify v
 - Counting vehicles when they cross a specified line  
 - Displaying real-time bounding boxes and labels  
 - Showing live count of each vehicle class (e.g., car, bus, truck, bike)
+
+## 📁 Project Structure  
+```
+Vehicle-Detection-and-Tracking-System/
+│
+├── Main.py                # Main script for detection, tracking, and counting
+├── Requirements.txt       # Dependencies for running the project
+├── LICENSE                # Open-source license (MIT / Apache etc.)
+└── .gitignore
+```
