@@ -52,3 +52,41 @@ The video window shows:
 - Total vehicle counts by category  
 
 Press **Q** to exit.
+
+## 🚀 Getting Started  
+
+### 1. Clone the Repository  
+```bash
+git clone https://github.com/subhashgowdak/Vehicle-Detection-and-Tracking-System.git
+cd Vehicle-Detection-and-Tracking-System
+```
+
+### 2. Create a Virtual Environment  
+```bash
+python -m venv .venv
+source .venv/bin/activate          # Mac/Linux
+.\.venv\Scripts\activate           # Windows
+```
+
+### 3. Install Dependencies  
+```bash
+pip install -r Requirements.txt
+```
+
+### 4. Download YOLO Model  
+Download YOLO model (if not present):
+
+```bash
+yolo download yolo11l.pt
+```
+
+or manually place any **YOLO model file** in the project folder and update:
+
+```python
+model = YOLO('yolo11l.pt')
+```
+
+### 5. Run the System  
+```bash
+python Main.py
+```
